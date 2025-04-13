@@ -2,10 +2,10 @@
   "name": "dbt BigQuery",
   "dockerComposeFile": "docker-compose.yml",
   "service": "dbt-bq",
-  "workspaceFolder": "/workspaces",
+  "workspaceFolder": "/workspaces/${DE-project}",
   "remoteEnv": {
-    "GOOGLE_APPLICATION_CREDENTIALS": "/workspaces/.gcp/credentials.json",
-    "DBT_PROFILES_DIR": "/workspaces/.dbt"
+    "GOOGLE_APPLICATION_CREDENTIALS": "/workspaces/${DE-project}/.gcp/credentials.json",
+    "DBT_PROFILES_DIR": "/workspaces/${DE-project}/.dbt"
   },
   "customizations": {
     "vscode": {

@@ -1,28 +1,27 @@
 #!/bin/bash
 
-# Set up Google credentials
-mkdir -p /workspaces/.gcp
+WORKSPACE_PATH="/workspaces/$(basename $(pwd))"
+
+# Create directories
+mkdir -p "$WORKSPACE_PATH/.gcp"
+mkdir -p "$WORKSPACE_PATH/.dbt"
+
+# Set up credentials
 if [ -n "$GOOGLE_CREDENTIALS_JSON" ]; then
-  echo "Setting up Google credentials..."
-  echo "$GOOGLE_CREDENTIALS_JSON" > /workspaces/.gcp/credentials.json
-  chmod 600 /workspaces/.gcp/credentials.json
-else
-  echo "⚠️ GOOGLE_CREDENTIALS_JSON not found! BigQuery connections will fail."
+  echo "$GOOGLE_CREDENTIALS_JSON" > "$WORKSPACE_PATH/.gcp/credentials.json"
+  chmod 600 "$WORKSPACE_PATH/.gcp/credentials.json"
 fi
 
-# Initialize dbt profile
-mkdir -p /workspaces/.dbt
-cat > /workspaces/.dbt/profiles.yml <<EOF
+# Create default profile
+cat > "$WORKSPACE_PATH/.dbt/profiles.yml" <<EOF
 default:
   target: dev
   outputs:
     dev:
       type: bigquery
       method: service-account
-      project: ${GCP_PROJECT:-[YOUR_PROJECT_ID]}
-      dataset: ${DBT_DATASET:-[YOUR_DATASET]}
+      project: ${GCP_PROJECT:-your-project-id}
+      dataset: ${DBT_DATASET:-your_dataset}
       threads: 4
-      keyfile: /workspaces/.gcp/credentials.json
+      keyfile: $WORKSPACE_PATH/.gcp/credentials.json
 EOF
-
-echo "✅ dbt profile configured for project: ${GCP_PROJECT:-[YOUR_PROJECT_ID]}"
