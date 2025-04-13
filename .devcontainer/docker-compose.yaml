@@ -1,0 +1,15 @@
+version: '3'
+services:
+  dbt-bq:
+    build:
+      context: ..
+      dockerfile: .devcontainer/Dockerfile
+    image: dbt/bigquery
+    volumes:
+      - ..:/workspace:cached
+    environment:
+      - DBT_PROFILES_DIR=/workspace/.dbt
+      - GOOGLE_APPLICATION_CREDENTIALS=/home/codespace/.config/gcloud/key.json
+    # Remove network_mode for Codespaces compatibility
+    ports:
+      - "8080:8080"  # Example port mapping
