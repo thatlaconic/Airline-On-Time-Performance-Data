@@ -1,0 +1,7 @@
+flights_data
+.terraform
+.terraform.lock.hcl
+terraform.tfstate
+terraform.tfstate.backup
+notes.md
+columns.md

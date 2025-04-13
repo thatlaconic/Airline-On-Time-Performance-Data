@@ -1,0 +1,54 @@
+version: 2
+
+models:
+  - name: flights_2020-2021
+    description: >
+      combined flights data of year 2020 and 2021.
+  - name: airport_congestion_analysis
+    description:  >
+      Measure ground inefficiencies. 
+      Airports with long taxi times may need better runway management.
+
+  - name: cancellations
+    description:  >
+      Diagnose cancellation drivers. 
+      Airlines with high A codes need internal process reviews.
+
+  - name: day-of-week-pattern
+    description: >
+      Optimize scheduling. Weekdays (business travel) vs. weekends (leisure travel) delays. 
+      Fridays often have higher delays due to peak travel.
+
+  - name: delay_analysis
+    description: >
+      Compare airlines' operational reliability.
+      Identify worst/best-performing airlines for accountability or customer recommendations.
+
+  - name: delay_breakdown
+    description: >
+      Understand root causes of delays. Airlines with high CarrierDelay may need operational improvements.
+
+  - name: diversion_analysis
+    description: >
+      Track unplanned landings.
+      High diversion rates may indicate poor route planning.
+
+  - name: missing_data_rep
+    description: >
+      Ensure dataset reliability. 
+      Gaps may require data cleaning or source adjustments.
+
+  - name: monthly_delay_trends
+    description: >
+      Identify seasonal patterns. Summer months often have more delays due to weather/volume.
+      December holidays may show congestion spikes.
+
+  - name: tail_num_performance
+    description: >
+      Monitor aircraft efficiency. 
+      Identify overused or underperforming aircraft for maintenance.
+
+  - name: worst_performing_route
+    description: >
+      Pinpoint chronically delayed routes.
+      Airlines can adjust schedules or increase buffers on these routes.

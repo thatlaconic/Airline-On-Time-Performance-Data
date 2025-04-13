@@ -1,0 +1,16 @@
+version: 2
+
+sources:
+  - name: staging
+    database: "{{ env_var('DBT_DATABASE', 'boreal-quarter-455022-q5') }}"
+    schema:
+      "{{ env_var('DBT_SCHEMA', 'flights_data_bq') }}"
+      # loaded_at_field: record_loaded_at
+    tables:
+      - name: Flights_2020
+      - name:
+          Flights_2021
+          # freshness:
+          # error_after: {count: 6, period: hour}
+      - name:
+          Airlines
