@@ -9,7 +9,7 @@ services:
       - ..:/workspace:cached
     environment:
       - DBT_PROFILES_DIR=/workspace/.dbt
-      - GOOGLE_APPLICATION_CREDENTIALS=/home/codespace/.config/gcloud/key.json
+      - GOOGLE_APPLICATION_CREDENTIALS=/workspace/.gcp/credentials.json
     # Remove network_mode for Codespaces compatibility
     ports:
       - "8080:8080"  # Example port mapping

@@ -4,7 +4,7 @@
   "service": "dbt-bq",
   "workspaceFolder": "/workspace",
   "remoteEnv": {
-    "GOOGLE_APPLICATION_CREDENTIALS": "/home/codespace/.config/gcloud/key.json",
+    "GOOGLE_APPLICATION_CREDENTIALS": "/workspace/.gcp/credentials.json",
     "DBT_PROFILES_DIR": "/workspace/.dbt"
   },
   "customizations": {
