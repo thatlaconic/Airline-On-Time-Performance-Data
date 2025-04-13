@@ -1,0 +1,19 @@
+{
+  "name": "dbt BigQuery",
+  "dockerComposeFile": "docker-compose.yml",
+  "service": "dbt-bq",
+  "workspaceFolder": "/workspace",
+  "remoteEnv": {
+    "GOOGLE_APPLICATION_CREDENTIALS": "/home/codespace/.config/gcloud/key.json",
+    "DBT_PROFILES_DIR": "/workspace/.dbt"
+  },
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "ms-python.python",
+        "innoverio.vscode-dbt-power-user"
+      ]
+    }
+  },
+  "postCreateCommand": "bash .devcontainer/post-create.sh"
+}
