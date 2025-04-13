@@ -6,10 +6,10 @@ services:
       dockerfile: .devcontainer/Dockerfile
     image: dbt/bigquery
     volumes:
-      - ..:/workspace:cached
+      - ..:/workspaces:cached
     environment:
-      - DBT_PROFILES_DIR=/workspace/.dbt
-      - GOOGLE_APPLICATION_CREDENTIALS=/workspace/.gcp/credentials.json
+      - DBT_PROFILES_DIR=/workspaces/.dbt
+      - GOOGLE_APPLICATION_CREDENTIALS=/workspaces/.gcp/credentials.json
     # Remove network_mode for Codespaces compatibility
     ports:
       - "8080:8080"  # Example port mapping
