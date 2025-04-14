@@ -174,7 +174,7 @@ dbt docs generate  # Generates data lineage
 ### 4.4 Looker Studio (Visualization)
 Connect to BigQuery as a data source.
 > **Dashboard**
-![](/workspaces/DE-project/Looker/page_1.PNG)
+![](Looker/page_1.PNG)
 
 
 
