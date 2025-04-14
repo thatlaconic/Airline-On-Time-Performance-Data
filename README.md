@@ -13,7 +13,7 @@ This project demonstrates a **modern data engineering pipeline** using:
 ---
 
 ## 2. Architecture Diagram  
-```mermaid
+```
     [Data Source] 
         |
         v
