@@ -1,6 +1,13 @@
 # Data Engineering Pipeline with Modern Tools  
 **A Comprehensive Report on Building an End-to-End Data Pipeline**  
+## About Dataset 
+This dataset was obtained from [kaggle](https://www.kaggle.com/datasets/robikscube/flight-delay-dataset-20182022?fbclid=IwZXh0bgNhZW0CMTEAAR2T1H6XTAsd0yEPQMr2LLCmAHwVv7uYcD9r5KBckwsjsrhfFNOTEt5fnSo_aem_mQbJbkFYbtlAPHT_34pqRQ) which originally came from United States Department of Transportation open data in [Reporting Carrier On-Time Performance (1987-present)](https://www.transtats.bts.gov/Fields.asp?gnoyr_VQ=)
+### Description
++ This database contains scheduled and actual departure and arrival times reported by certified U.S. air carriers that account for at least half of one percent of domestic scheduled passenger revenues. In 2018 the percent changed from one percent to half of one percent. The data is collected by the Office of Airline Information, Bureau of Transportation Statistics (BTS).
++ **Reporting Carrier On-Time Performance (1987-present)**
+Reporting carriers are required to (or voluntarily) report on-time data for flights they operate: on-time arrival and departure data for non-stop domestic flights by month and year, by carrier and by origin and destination airport. Includes scheduled and actual departure and arrival times, canceled and diverted flights, taxi-out and taxi-in times, causes of delay and cancellation, air time, and non-stop distance. Use Download for individual flight data.
 
+    
 ## 1. Overview  
 This project demonstrates a **modern data engineering pipeline** using:  
 - **Terraform** (Infrastructure as Code)  
@@ -26,7 +33,7 @@ This project demonstrates a **modern data engineering pipeline** using:
     [BigQuery Raw Tables]
         |
         v
-    [DBT Models (Staging, Marts)]
+    [DBT Models (Staging, Core)]
         |
         v
     [Looker Studio Dashboard]
