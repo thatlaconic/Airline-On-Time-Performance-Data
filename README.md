@@ -52,6 +52,7 @@ This project demonstrates a **modern data engineering pipeline** using:
 
 ## 4. Step-by-Step Implementation
 ### 4.1 Terraform Setup (Infrastructure as Code)
+`variables.tf`
 `main.tf` – Provisions GCP resources:
 ```hcl
 terraform {
