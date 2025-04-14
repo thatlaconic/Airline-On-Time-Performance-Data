@@ -180,6 +180,10 @@ ORDER BY Origin
 dbt run  # Builds models in BigQuery
 dbt docs generate  # Generates data lineage
 ```
+**DBT graph**
+
+![](Dbt/dbt_graph.PNG)
+
 ### 4.4 Looker Studio (Visualization)
 Connect to BigQuery as a data source.
 + **Dashboard**
